@@ -34,7 +34,7 @@ rootProject.allprojects {
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:+'
-    compile 'ir.tapsell.plus:tapsell-plus-sdk-reactnative:0.0.13'
+    implementation 'com.facebook.react:react-native:+'
+    implementation 'ir.tapsell.plus:tapsell-plus-sdk-reactnative:0.0.15'
 }
   
