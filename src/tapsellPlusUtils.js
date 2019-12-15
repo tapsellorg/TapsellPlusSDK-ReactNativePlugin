@@ -1,7 +1,7 @@
 import { DeviceEventEmitter } from "react-native";
 import Constants from "./constants";
 let TapsellPlusNativeModule = require("react-native").NativeModules
-  .RNTapsellPlusSdk;
+  .RNTapsellPlus;
 
 let callbacks = {};
 

@@ -1,4 +1,4 @@
-let TapsellPlusNativeModule = require("react-native").NativeModules.RNTapsellPlusSdk;
+let TapsellPlusNativeModule = require("react-native").NativeModules.RNTapsellPlus;
 
 module.exports = {
     ON_RESPONSE_EVENT: TapsellPlusNativeModule.ON_RESPONSE_EVENT,
