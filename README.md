@@ -30,7 +30,7 @@
 
 ## Usage
 ```javascript
-import RNTapsellPlusSdk from 'react-native-tapsell-plus-sdk';
+import RNTapsellPlusSdk from 'react-native-tapsell-plus';
 
 // TODO: What to do with the module?
 RNTapsellPlusSdk;
