@@ -6,6 +6,7 @@ let TapsellPlusNativeModule = require("react-native").NativeModules
 let callbacks = {};
 
 callbacks[Constants.ON_RESPONSE_EVENT] = {};
+callbacks[Constants.ON_NATIVE_RESPONSE_EVENT] = {};
 callbacks[Constants.ON_ERROR_EVENT] = {};
 
 callbacks[Constants.ON_OPENED_EVENT] = {};
@@ -18,6 +19,11 @@ const appEventEmitter = DeviceEventEmitter;
 appEventEmitter.addListener(Constants.ON_RESPONSE_EVENT, event => {
   if (callbacks[Constants.ON_RESPONSE_EVENT][event.zone_id])
     callbacks[Constants.ON_RESPONSE_EVENT][event.zone_id]();
+});
+
+appEventEmitter.addListener(Constants.ON_NATIVE_RESPONSE_EVENT, event => {
+  if (callbacks[Constants.ON_NATIVE_RESPONSE_EVENT][event.zone_id])
+    callbacks[Constants.ON_NATIVE_RESPONSE_EVENT][event.zone_id](event);
 });
 
 appEventEmitter.addListener(Constants.ON_ERROR_EVENT, event => {
@@ -73,7 +79,7 @@ module.exports = {
   },
 
   requestNative: function(zoneId, onResponse, onError) {
-    callbacks[Constants.ON_RESPONSE_EVENT][zoneId] = onResponse;
+    callbacks[Constants.ON_NATIVE_RESPONSE_EVENT][zoneId] = onResponse;
     callbacks[Constants.ON_SHOW_ERROR_EVENT][zoneId] = onError;
     TapsellPlusNativeModule.requestNative(zoneId);
   },

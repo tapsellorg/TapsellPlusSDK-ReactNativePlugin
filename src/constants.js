@@ -2,6 +2,7 @@ let TapsellPlusNativeModule = require("react-native").NativeModules.RNTapsellPlu
 
 module.exports = {
     ON_RESPONSE_EVENT: TapsellPlusNativeModule.ON_RESPONSE_EVENT,
+    ON_NATIVE_RESPONSE_EVENT: TapsellPlusNativeModule.ON_NATIVE_RESPONSE_EVENT,
     ON_ERROR_EVENT: TapsellPlusNativeModule.ON_ERROR_EVENT,
 
     ON_OPENED_EVENT: TapsellPlusNativeModule.ON_OPENED_EVENT,
