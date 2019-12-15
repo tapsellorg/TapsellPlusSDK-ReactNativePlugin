@@ -1,3 +1,4 @@
+# TapsellPlusSDK-ReactNativePlugin [![npm version](https://badge.fury.io/js/react-native-tapsell-plus.svg)](https://badge.fury.io/js/react-native-tapsell-plus)
 
 # react-native-tapsell-plus
 
