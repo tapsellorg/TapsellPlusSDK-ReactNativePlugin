@@ -49,7 +49,7 @@ appEventEmitter.addListener(Constants.ON_REWARDED_EVENT, event => {
 
 /**
  * Main class to interact with
- * 
+ *
  * **Note**: Every requestSomething method return a {Promise} which contains a `responseId` string
  *   this responseId must be stored to be passed to show method
  *   Also, every show* method requires onOpen, onClose, onRewarded and onError callbacks
@@ -57,25 +57,25 @@ appEventEmitter.addListener(Constants.ON_REWARDED_EVENT, event => {
 const TapsellPlus = class {
 
   static initialize(appKey) {
-    TapsellPlusNativeModule.initialize(appKey);
+    TapsellPlusNativeModule?.initialize(appKey);
   }
 
   static setDebugMode(logLevel) {
-    TapsellPlusNativeModule.setDebugMode(logLevel);
+    TapsellPlusNativeModule?.setDebugMode(logLevel);
   }
 
   /**
-   * 
-   * @param {string} zoneId 
+   *
+   * @param {string} zoneId
    * @returns {Promise} (Resolve with a {string} responseId). Rejects if there's an error
    */
   static async requestRewardedVideoAd(zoneId) {
-    return TapsellPlusNativeModule.requestRewardedVideoAd(zoneId)
+    return TapsellPlusNativeModule?.requestRewardedVideoAd(zoneId)
   }
 
-  
+
   /**
-   * 
+   *
    * @param {string} responseId passed from the requestRewardedVideoAd in it's promise
    * @param {function({response_id: string, zone_id: string}):void} onOpened contains {responseId, zoneId}
    * @param {function({response_id: string, zone_id: string}):void} onClosed contains {responseId, zoneId}
@@ -87,21 +87,21 @@ const TapsellPlus = class {
     callbacks[Constants.ON_CLOSED_EVENT][responseId] = onClosed
     callbacks[Constants.ON_REWARDED_EVENT][responseId] = onRewarded
     callbacks[Constants.ON_ERROR_EVENT][responseId] = onError
-    TapsellPlusNativeModule.showRewardedVideoAd(responseId);
+    TapsellPlusNativeModule?.showRewardedVideoAd(responseId);
   }
 
   /**
-   * 
-   * @param {string} zoneId 
+   *
+   * @param {string} zoneId
    * @returns {Promise<string>} (Resolve with a {string} responseId). Rejects if there's an error
    */
   static async requestInterstitialAd(zoneId) {
-    return TapsellPlusNativeModule.requestInterstitialAd(zoneId);
+    return TapsellPlusNativeModule?.requestInterstitialAd(zoneId);
   }
 
-  
+
   /**
-   * 
+   *
    * @param {string} responseId passed from the requestInterstitialAd in it's promise
    * @param {function({response_id: string, zone_id: string}):void} onOpened contains {responseId, zoneId}
    * @param {function({response_id: string, zone_id: string}):void} onClosed contains {responseId, zoneId}
@@ -111,21 +111,21 @@ const TapsellPlus = class {
     callbacks[Constants.ON_OPENED_EVENT][responseId] = onOpened
     callbacks[Constants.ON_CLOSED_EVENT][responseId] = onClosed
     callbacks[Constants.ON_ERROR_EVENT][responseId] = onError
-    TapsellPlusNativeModule.showInterstitialAd(responseId);
+    TapsellPlusNativeModule?.showInterstitialAd(responseId);
   }
 
   /**
    * Requests a native ad
-   * @param {string} zoneId 
+   * @param {string} zoneId
    * @returns {Promise<string>} (Resolve with a string as responseId). Rejects if there's an error
    */
   static async requestNativeAd(zoneId) {
-    return TapsellPlusNativeModule.requestNativeAd(zoneId);
+    return TapsellPlusNativeModule?.requestNativeAd(zoneId);
   }
-  
-  
+
+
   /**
-   * 
+   *
    * @param {string} responseId passed from the requestNativeAd in it's promise
    * @param {function(object):void} onOpened contains an object consisting of {ad_id, zone_id, response_id, title, description, call_to_action_text, icon_url, portrait_static_image_url, landscape_static_image_url} **Note**: Keys might not be present
    * @param {function({response_id: string, zone_id: string, error_message: string}):void} onError contains {response_id, zone_id, error_message}
@@ -133,39 +133,39 @@ const TapsellPlus = class {
    static showNativeAd(responseId, onOpened, onError) {
     callbacks[Constants.ON_NATIVE_RESPONSE_EVENT][responseId] = onOpened
     callbacks[Constants.ON_ERROR_EVENT][responseId] = onError
-    TapsellPlusNativeModule.showNativeAd(responseId);
+    TapsellPlusNativeModule?.showNativeAd(responseId);
   }
 
   /**
-   * 
+   *
    * @param {string} responseId is the id used to show the native ad
    */
   static nativeAdClicked(responseId) {
-    TapsellPlusNativeModule.nativeAdClicked(responseId);
+    TapsellPlusNativeModule?.nativeAdClicked(responseId);
   }
 
   /**
-   * 
-   * @param {string} responseId is the id that is used to show the related ad 
+   *
+   * @param {string} responseId is the id that is used to show the related ad
    * @returns {Promise<string>} that resolves with 'true' if destruction was a success, rejects otherwise
    */
   static async desntroyNativeAd(responseId) {
-    return TapsellPlusNativeModule.destroyNativeAd(responseId);
+    return TapsellPlusNativeModule?.destroyNativeAd(responseId);
   }
 
 
   /**
-   * 
-   * @param {string} zoneId 
+   *
+   * @param {string} zoneId
    * @param {TapsellPlusBannerType} bannerType
    * @returns {Promise<string>} (Resolve with a {string} responseId). Rejects if there's an error
    */
   static requestStandardBannerAd(zoneId, bannerType) {
-    return TapsellPlusNativeModule.requestStandardBannerAd(zoneId, bannerType);
+    return TapsellPlusNativeModule?.requestStandardBannerAd(zoneId, bannerType);
   }
 
   /**
-   * 
+   *
    * @param {string} responseId passed from the requestStandardBannerMathod in it's promise
    * @param {TapsellPlusHorizontalGravity} horizontalGravity is the position of ad in the page
    * @param {TapsellPlusVerticalGravity} verticalGravity is the position of ad in the page
@@ -175,7 +175,7 @@ const TapsellPlus = class {
   static showStandardBannerAd(responseId, horizontalGravity, verticalGravity, onOpened, onError) {
     callbacks[Constants.ON_OPENED_EVENT][responseId] = onOpened
     callbacks[Constants.ON_ERROR_EVENT][responseId] = onError
-    TapsellPlusNativeModule.showStandardBannerAd(responseId, horizontalGravity, verticalGravity);
+    TapsellPlusNativeModule?.showStandardBannerAd(responseId, horizontalGravity, verticalGravity);
   }
 
 
@@ -186,7 +186,7 @@ const TapsellPlus = class {
    * @returns {Promise<string>} that resolved with 'true' if destruction was a success, otherwise rejects with the error
    */
   static async destroyStandardBannerAd(responseId) {
-    return TapsellPlusNativeModule.destroyStandardBannerAd(responseId);
+    return TapsellPlusNativeModule?.destroyStandardBannerAd(responseId);
   }
 
   /**
@@ -194,7 +194,7 @@ const TapsellPlus = class {
    * > **Note** This method does not request for a new ad and sets the banner visibility to View.VISIBLE
    */
   static displayStandardBanner() {
-    TapsellPlusNativeModule.displayStandardBanner();
+    TapsellPlusNativeModule?.displayStandardBanner();
   }
 
   /**
@@ -202,7 +202,7 @@ const TapsellPlus = class {
    * > **Note** This method does not remove the request result and just sets the banner visibility to View.GONE
    */
   static hideStandardBanner() {
-    TapsellPlusNativeModule.hideStandardBanner();
+    TapsellPlusNativeModule?.hideStandardBanner();
   }
 }
 
