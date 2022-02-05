@@ -1,5 +1,24 @@
 # Changelog
 
+## 2.1.6 (2 Feb, 2022)
+- [**New**]: Add Vast Activity to Github Sample
+- [**New**]: Add AppSetId due to new changes to advertisingId
+- [**New**]: Add support for Mintegral Interstitial and Rewarded Ads
+- [**New**]: Add support for Mintegral standard banner ads
+- [**New**] Enable Hermes Engine support in sample
+- [*Fix*] Fixed a critical issue in metro bundler after installing sdk on react native +0.64
+- [*Fix*] Fixed crash when running ios version
+- [*Fix*] Fixed Admob native banner crash
+- [*Fix*] Fixed consistent request in VAST
+- [*Fix*] Fixed back button activation and show exit dialog option in Tapsell rewarded videos
+- [*Fix*] Fixed Tapsell Native Banner NullPointerException
+- [*Fix*] Fixed Standard banner refresh issue: it will now remove the previous banner if the request was failed and banner was not in shown state
+  - Modified adNetworks: AppLovin, AdMob, Tapsell, Mintegral
+- [change] Update Android dependency (TapsellPlus) to 2.1.6
+- [change] Update sample react-native version to 0.67.1
+- [change] Error will notify more verbosely when all adNetworks failed to load
+- [change] Update Tapsell version to 4.7.4
+
 ## 2.1.3
 - [**New**] Add AdColony Standard Banner
 - [**New**] Add Chartboost Interstitial Ad
