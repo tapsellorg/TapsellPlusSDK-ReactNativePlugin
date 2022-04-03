@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.1.7 (30 March, 2022)
+- [**New**] Update admob to `20.6.0`
+  - Also `appSetId` is updated to `16.0.2`
+- [*Fix*] Fix SSLFactory on Android prior to 4.4
+- [change] Update Android dependency (TapsellPlus) to 2.1.7
+- [change] Update sample react-native version to 0.67.4 nad react version to 18.0.0
+
 ## 2.1.6 (2 Feb, 2022)
 - [**New**]: Add Vast Activity to Github Sample
 - [**New**]: Add AppSetId due to new changes to advertisingId
