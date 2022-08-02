@@ -35,5 +35,5 @@ rootProject.allprojects {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'
-    implementation 'ir.tapsell.plus:tapsell-plus-sdk-reactnative:2.1.7'
+    implementation 'ir.tapsell.plus:tapsell-plus-sdk-reactnative:2.1.8-rc01'
 }

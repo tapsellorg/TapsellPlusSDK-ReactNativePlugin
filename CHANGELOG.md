@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.1.8-rc01 (02 August, 2022)
+- [change] Update Android dependency (TapsellPlus) to 2.1.8-rc01
+
 ## 2.1.7 (30 March, 2022)
 - [**New**] Update admob to `20.6.0`
   - Also `appSetId` is updated to `16.0.2`
