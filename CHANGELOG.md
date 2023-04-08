@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.1.8 (08 April, 2023)
+- [change] Update Android dependency (TapsellPlus) to `2.1.8`
+- [change] Update Android `targetSdkVersion` to 33
+- [New] Added dynamic configs for `backPressed` final banner in video ads
+- [New] Add dynamic configs for back alert dialog in videos
+- [Fix] Update UnityAds to V4.3.0 and fix deprecations based on ([UnityAds API](https://docs.unity.com/ads/UnityAPI.html))
+
 ## 2.1.8-rc01 (02 August, 2022)
 - [change] Update Android dependency (TapsellPlus) to 2.1.8-rc01
 
