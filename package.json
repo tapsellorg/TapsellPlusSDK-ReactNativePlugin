@@ -1,6 +1,6 @@
 {
   "name": "react-native-tapsell-plus",
-  "version": "2.1.8",
+  "version": "2.2.0",
   "description": "TapsellPlus React native plugin.",
   "files": [
     "android",
