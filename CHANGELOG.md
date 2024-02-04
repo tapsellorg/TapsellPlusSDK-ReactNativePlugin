@@ -1,5 +1,38 @@
 # Changelog
 
+## 2.2.4 (05 Feb, 2023)
+
+- [Change]: Updated Tapsell legacy SDK to `4.8.8`
+- [New]: Added support for `Gradle 8` and `R8 Full mode`. No need to add proguard rules
+  anymore. [#75](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/75). You need to add few rules if you
+  don't use all ad networks.
+  See [#80](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/80)
+  See [Sample](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/blob/master/app/src/main/java/ir/tapsell/plussample/android/ExoPlayerVastActivity.java)
+- [Fix]: Fixed a crash related to OkHttp in Android 4 by Downgrading Retrofit version to 2.5.0.
+- [Fix]: Fixed logger crash when printing the error log message.
+- [Fix]: Trigger failure callback in some cases: when developer makes multiple requests at the same time.
+- [Fix]: Fixed few bugs and crashes
+- [Fix]: Fixed a crash when using `telephonyManager.getAllCellInfo();
+- [Fix]: Fixed GDPR consent issues in Tapsell sdk.
+
+## 2.2.0 (02 Jul, 2023)
+ 
+- [Fix]: Fixed Google Play policy error related to Collecting user's installed
+  apps [GH-68](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/68
+- [**Change**]: Increase `minSdkVersion` to 19 to support Admob `V21.5.0`
+- [**New**]: Added new UI for back dialog
+- [Change] Update Android dependency (TapsellPlus)
+  to [`2.2.0`](https://docs.tapsell.ir/plus-sdk/android/main/#20220621-220)
+- [Fix]: Fix some memory leaks in tapsell sdk and tapsell plus sdk
+- [Fix]: fix some proguard issues
+- [Fix]: Fix wrong back dialog options in rewarded videos
+- [change] Update sample react-native version to 0.71.11
+- [Change]: Update Admob to `V21.5.0`
+- [Change]: Update UnityAds to `V4.6.1`
+- [Change]: Update Mintegral to `V16.3.91`
+- [Change]: Update AdColony to `V4.8.0`
+- [Change]: Update AppLovin to `V11.8.2`
+
 ## 2.1.8 (08 April, 2023)
 - [change] Update Android dependency (TapsellPlus) to `2.1.8`
 - [change] Update Android `targetSdkVersion` to 33
