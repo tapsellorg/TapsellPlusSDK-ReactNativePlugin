@@ -1,6 +1,20 @@
 # Changelog
 
-## 2.2.4 (05 Feb, 2023)
+## 2.2.6 (02 June, 2024)
+
+- [New]: Added user messaging platform (`UMP`) to manage user consent for admob to resolve GooglePlay issue.
+- [New]: Added new method `setGDPRConsent(true)` to send the GDPR consent status from user to SDK.
+- [Change]: Update `tapsell-sdk` to `4.9.0`
+- [Change]: Updated `Google-Mobile-Ads` (`Admob`) to `22.6.0`
+- [Change]: Updated `Mintegral` to `16.6.71`
+- [Change]: Updated `Applovin` to `12.4.0`
+- [Change]: Updated `UnityAds` to `4.9.2`
+- [Change]: Removed `AdColony` ad network due to deprecation.
+- [Change]: Updated `react-native` version of sample project to `0.74.1`
+- [Change]: Updated `Kotlin` version of sample project to `1.9.22`
+- [Change]: Changed sample project's `minSdkVersion` to `26` to support latest react native version
+
+## 2.2.4 (05 Feb, 2024)
 
 - [Change]: Updated Tapsell legacy SDK to `4.8.8`
 - [New]: Added support for `Gradle 8` and `R8 Full mode`. No need to add proguard rules

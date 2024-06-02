@@ -60,6 +60,10 @@ const TapsellPlus = class {
     TapsellPlusNativeModule?.initialize(appKey);
   }
 
+  static setGDPRConsent(consent) {
+    TapsellPlusNativeModule?.setGDPRConsent(consent)
+  }
+
   static setDebugMode(logLevel) {
     TapsellPlusNativeModule?.setDebugMode(logLevel);
   }
