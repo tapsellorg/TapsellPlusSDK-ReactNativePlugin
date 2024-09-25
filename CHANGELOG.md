@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.2.8 (25 Sep, 2024)
+
+- Updated tapsell-sdk to `4.9.3`
+- Added support for Android target sdk `34`
+- Removed Tapsell `GDPR` dialog from SDK.
+- Added a request debouncer to prevent multiple requests from being sent in a short period of
+  time.
+
 ## 2.2.6 (02 June, 2024)
 
 - [New]: Added user messaging platform (`UMP`) to manage user consent for admob to resolve GooglePlay issue.
