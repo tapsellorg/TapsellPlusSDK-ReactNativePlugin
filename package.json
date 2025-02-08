@@ -1,6 +1,6 @@
 {
   "name": "react-native-tapsell-plus",
-  "version": "2.2.8",
+  "version": "2.3.1",
   "description": "TapsellPlus React native plugin.",
   "files": [
     "android",
@@ -20,7 +20,8 @@
   "author": "Tapsell",
   "license": "Apache 2.0",
   "peerDependencies": {
-    "react-native": "0.63.4"
+    "react": ">= 16.13.1",
+    "react-native": ">= 0.63.4"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
   },
   "homepage": "https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin",
   "devDependencies": {
+    "react-native": ">=0.63.4",
     "@babel/cli": "^7.25.6",
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.4"
